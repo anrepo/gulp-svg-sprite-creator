@@ -66,4 +66,8 @@ gulp.task('browser-sync', function() {
 });
 
 
-gulp.task('default', gulp.parallel('html', 'makesprite', 'browser-sync', 'watch'));
+// Отладка в реальном времени
+gulp.task('watch', gulp.parallel('html', 'makesprite', 'browser-sync', 'watch'));
+
+// Обычная сборка
+gulp.task('default', gulp.parallel('makesprite'));
