@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Sprite Creator</title>
+    <style>
+        :root {
+            --social-fill: #333;
+            --social-fill-hover: #6B6A6A;
+            --social-fill-hover-light: #9D9C9C;
+        }
+        .social__links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            border: 1px solid coral;
+            border-radius: 6px;
+        }
+
+        .social__icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 1rem;
+            border: 2px solid var(--social-fill);
+            border-radius: 6px;
+            fill: var(--social-fill);
+            transition: all 0.15s ease-in-out;
+        }
+
+        .social__icon:hover {
+            fill: var(--social-fill-hover-light);
+            border-color: var(--social-fill-hover-light);
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="social__links">
+        <svg class="social__icon">
+            <use xlink:href="svg-sprites/sprite.svg#burger"></use>
+        </svg>
+        <svg class="social__icon">
+            <use xlink:href="svg-sprites/sprite.svg#user"></use>
+        </svg>
+        <svg class="social__icon">
+            <use xlink:href="svg-sprites/sprite.svg#calendar"></use>
+        </svg>
+        <svg class="social__icon">
+            <use xlink:href="svg-sprites/sprite.svg#gallery"></use>
+        </svg>
+    </div>
+</body>
+</html>

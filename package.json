@@ -1,0 +1,21 @@
+{
+  "name": "gulp-svg-sprite-creator",
+  "version": "1.0.0",
+  "description": "SVG Sprite Creator",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anrepo/gulp-svg-sprite-creator.git"
+  },
+  "author": "APol",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-svg-sprite": "^1.5.0"
+  }
+}
