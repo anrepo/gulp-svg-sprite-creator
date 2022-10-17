@@ -10,20 +10,25 @@
             --social-fill: #333;
             --social-fill-hover: #6B6A6A;
             --social-fill-hover-light: #9D9C9C;
+
+            font-size: 10px;
         }
         .social__links {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             padding: 1rem;
             border: 1px solid coral;
             border-radius: 6px;
+            overflow: auto;
         }
 
         .social__icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 1rem;
+            width: 35px;
+            height: 35px;
+            min-width: 35px;
+            margin: 0.2rem 0.4rem;
             border: 2px solid var(--social-fill);
             border-radius: 6px;
             fill: var(--social-fill);
@@ -39,19 +44,57 @@
     </style>
 </head>
 <body>
+    <h1>Особнности SVG спрайтов</h1>
+
     <div class="social__links">
         <svg class="social__icon">
-            <use xlink:href="svg-sprites/sprite.svg#burger"></use>
+            <use xlink:href="../dist/svg-sprites/sprite.svg#burger"></use>
         </svg>
         <svg class="social__icon">
-            <use xlink:href="svg-sprites/sprite.svg#user"></use>
+            <use xlink:href="../dist/svg-sprites/sprite.svg#user"></use>
         </svg>
         <svg class="social__icon">
-            <use xlink:href="svg-sprites/sprite.svg#calendar"></use>
+            <use xlink:href="../dist/svg-sprites/sprite.svg#calendar"></use>
         </svg>
         <svg class="social__icon">
-            <use xlink:href="svg-sprites/sprite.svg#gallery"></use>
+            <use xlink:href="../dist/svg-sprites/sprite.svg#gallery"></use>
+        </svg>
+        <svg class="social__icon">
+            <use xlink:href="../dist/svg-sprites/sprite.svg#arrow-top"></use>
+        </svg>
+        <svg class="social__icon">
+            <use xlink:href="../dist/svg-sprites/sprite.svg#arrow-bottom"></use>
         </svg>
     </div>
+
+    <h3>Как меняется изображение картинки при превращении в спрайт?</h3>
+    <div>
+        <h3>Правильная отрисовка стрелки вверх:</h3>
+
+        <svg class="social__icon">
+            <use xlink:href="../dist/svg-sprites/sprite.svg#arrow-top"></use>
+        </svg>
+    </div>
+
+    <div>
+        <h3>Неверное отображение отрисовки SVG:</h3>
+        
+        <svg class="social__icon">
+            <use xlink:href="../dist/svg-sprites/sprite.svg#arrow-top-1-1"></use>
+        </svg>
+        <svg class="social__icon">
+            <use xlink:href="../dist/svg-sprites/sprite.svg#arrow-top-1-3"></use>
+        </svg>
+        <svg class="social__icon">
+            <use xlink:href="../dist/svg-sprites/sprite.svg#arrow-top-2-1"></use>
+        </svg>
+        <svg class="social__icon">
+            <use xlink:href="../dist/svg-sprites/sprite.svg#arrow-top-3-1"></use>
+        </svg>
+        <svg class="social__icon">
+            <use xlink:href="../dist/svg-sprites/sprite.svg#arrow-utop-3-2"></use>
+        </svg>
+    </div>
+    
 </body>
 </html>
